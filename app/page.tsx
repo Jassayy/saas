@@ -15,7 +15,6 @@ import {
 import { ModeToggle } from "@/components/themes/Toggle";
 import { FeatureCard } from "@/components/landing/FeatureCard";
 import { useEffect } from "react";
-import { div } from "motion/react-client";
 
 const features: { icon: LucideIcon; title: string; description: string }[] = [
   {

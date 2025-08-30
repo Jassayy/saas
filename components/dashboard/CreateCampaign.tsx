@@ -36,12 +36,12 @@ const CreateCampaign = () => {
     <Dialog>
       <form>
         <DialogTrigger asChild>
-          <Button className="rounded-3xl flex items-center h-10 py-5 justify-center">
+          <Button className="rounded-3xl flex items-center h-10 py-5 justify-center cursor-pointer">
             <IconPlus />
             <h3 className="text-md font-semibold">Create Campaign</h3>
           </Button>
         </DialogTrigger>
-        <DialogContent className="sm:max-w-[900px] dark:bg-neutral-800">
+        <DialogContent className="sm:max-w-[600px] dark:bg-neutral-800">
           <DialogHeader>
             <DialogTitle>Campaign Details</DialogTitle>
             <DialogDescription>
@@ -66,7 +66,7 @@ const CreateCampaign = () => {
                   <SelectTrigger data-testid="select-campaign-type">
                     <SelectValue placeholder="Select campaign type" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="dark:bg-neutral-800">
                     {CAMPAIGN_TYPES.map((type) => (
                       <SelectItem
                         key={type}
