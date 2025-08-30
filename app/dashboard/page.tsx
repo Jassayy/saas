@@ -1,10 +1,12 @@
 "use client";
 import Analytics from "@/components/dashboard/Analytics";
 import CreateCampaign from "@/components/dashboard/CreateCampaign";
+import RecentActivity from "@/components/dashboard/RecentActivity";
+import RecentCampaigns from "@/components/dashboard/RecentCampaigns";
 import RevenueChart from "@/components/dashboard/RevenueChart";
 import { useUser } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 const Dashboard = () => {
   const { isSignedIn, user, isLoaded } = useUser();
@@ -45,6 +47,10 @@ const Dashboard = () => {
         </div>
         <div>
           <RevenueChart />
+        </div>
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          <RecentCampaigns />
+          <RecentActivity />
         </div>
       </div>
     </>
