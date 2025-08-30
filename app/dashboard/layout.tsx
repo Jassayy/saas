@@ -1,6 +1,12 @@
 "use client";
 import { SidebarDemo } from "@/components/layout/SideBarDemo";
+import { Inter } from "next/font/google";
 import { useState } from "react";
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export default function DashboardLayout({
   children,
@@ -9,7 +15,7 @@ export default function DashboardLayout({
 }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="flex h-screen">
+    <div className={`flex h-screen ${inter.className} antialiased`}>
       {/* Sidebar on the left */}
       <div
         className={`transition-all duration-300 ease-in-out ${

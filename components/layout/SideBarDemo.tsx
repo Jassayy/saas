@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "../ui/sidebar";
-import { IconDashboard, IconGraph, IconSettings } from "@tabler/icons-react";
+import { IconGraph, IconHome, IconSettings } from "@tabler/icons-react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { UserButton, useUser } from "@clerk/nextjs";
@@ -19,7 +19,7 @@ export function SidebarDemo({ open }: SidebarDemoProps) {
       label: "Dashboard",
       href: "/dashboard",
       icon: (
-        <IconDashboard className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+        <IconHome className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
     {
