@@ -1,11 +1,14 @@
-import React from 'react'
+import CreateCampaign from "@/components/dashboard/CreateCampaign";
+import CampaignList from "@/components/dashboard/CampaignList";
 
-const page = () => {
+export default function CampaignPage() {
   return (
-    <div>
-      this is campaign
+    <div className="flex flex-col gap-8">
+      <div className="flex justify-between items-center">
+        <h1 className="text-4xl font-semibold text-teal-500">Campaigns</h1>
+        <CreateCampaign />
+      </div>
+      <CampaignList />
     </div>
-  )
+  );
 }
-
-export default page

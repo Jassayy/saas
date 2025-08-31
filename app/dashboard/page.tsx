@@ -29,7 +29,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <div className="w-full flex items-center justify-between px-24 border-b border-neutral-300 dark:border-neutral-700 pb-3">
+      <div className="w-full flex items-center justify-between  border-b border-neutral-300 dark:border-neutral-700 pb-3">
         <div>
           <h1 className="text-4xl font-semibold text-teal-500">Dashboard</h1>
           <p>
@@ -42,11 +42,11 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="px-16 flex flex-col gap-4 py-3">
+      <div className="flex flex-col gap-4 py-3">
         <div>
           <Analytics />
         </div>
-       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="lg:col-span-2">
             <RevenueChart />
           </div>
