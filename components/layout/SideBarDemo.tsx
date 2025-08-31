@@ -1,7 +1,15 @@
 "use client";
 import React from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "../ui/sidebar";
-import { IconGraph, IconHome, IconSettings } from "@tabler/icons-react";
+import {
+  IconCalendar,
+  IconCrown,
+  IconGraph,
+  IconHome,
+  IconMicrophone,
+  IconSettings,
+  IconSparkles,
+} from "@tabler/icons-react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { UserButton, useUser } from "@clerk/nextjs";
@@ -24,16 +32,37 @@ export function SidebarDemo({ open }: SidebarDemoProps) {
     },
     {
       label: "Analytics",
-      href: "#analytics",
+      href: "/dashboard/analytics",
       icon: (
         <IconGraph className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
     {
-      label: "Settings",
-      href: "/settings",
+      label: "Campaign",
+      href: "/dashboard/campaign",
       icon: (
-        <IconSettings className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+        <IconMicrophone className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+      ),
+    },
+    {
+      label: "Schedule",
+      href: "/dashboard/schedule-posts",
+      icon: (
+        <IconCalendar className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+      ),
+    },
+    {
+      label: "Upgrade",
+      href: "/dashboard/upgrade",
+      icon: (
+        <IconCrown className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
+      ),
+    },
+    {
+      label: "Generate",
+      href: "/dashboard/generate-content",
+      icon: (
+        <IconSparkles className="h-5 w-5 shrink-0 text-neutral-700 dark:text-neutral-200" />
       ),
     },
   ];

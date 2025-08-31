@@ -63,7 +63,7 @@ const activityIcons: { [key: string]: React.ReactNode } = {
 
 const RecentActivity = () => {
   return (
-    <Card className="w-full dark:bg-neutral-900">
+    <Card className="w-full dark:bg-neutral-900 ">
       <CardHeader>
         <CardTitle>Recent Activity</CardTitle>
         <CardDescription>
